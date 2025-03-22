@@ -9,7 +9,7 @@ public class enemySpawner : MonoBehaviour
     [SerializeField] Transform hedef;  // Hedef nesne
     [SerializeField] float speed = 0.5f; // Hýz ve mesafe kontrolü
     [SerializeField] float spawnInterval = 5f; // Spawn aralýðý
-    public GameObject instant;
+    public GameObject instantEnemy;
     int counter = 0; // Ateþ etme sayacý
     float timer = 0,tempmesafe; // Spawn zamanlayýcý
     Vector3 difference;
@@ -42,59 +42,56 @@ public class enemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        instant = Instantiate(enemy, navigate.position, enemy.transform.rotation);
-        StartCoroutine(MoveEnemy(instant));
+        instantEnemy = Instantiate(enemy, navigate.position, enemy.transform.rotation);
+        StartCoroutine(MoveEnemy(instantEnemy));
     }
 
     IEnumerator MoveEnemy(GameObject instant)
     {
-             difference = new Vector3(
-              instant.transform.position.x - hedef.position.x,
-              instant.transform.position.y - hedef.position.y,
-              instant.transform.position.z - hedef.position.z);
         // Düþman hedefe doðru hareket eder
-               distance = Math.Sqrt(
-              Math.Pow(difference.x, 2f) +
-              Math.Pow(difference.y, 2f) +
-              Math.Pow(difference.z, 2f));
-
-        while (instant != null && distance > konum)
+        while (instant != null)
         {
+            // Düþman ve hedef arasýndaki mesafeyi hesapla
+            difference = instant.transform.position - hedef.position;
+            distance = Math.Sqrt(
+                Math.Pow(difference.x, 2f) +
+                Math.Pow(difference.y, 2f) +
+                Math.Pow(difference.z, 2f));
+
+            // Eðer mesafe konum deðerinden küçükse, ateþ et ve düþmaný yok et
+            if (distance <= konum)
+            {
+                if (instant != null) // Güvenlik kontrolü
+                {
+                    ballSpawner.Instance.FireBall(instant, hedef);
+                    yield return new WaitForSeconds(1f);
+
+                    // Nesne hâlâ mevcut mu kontrol et
+                    if (instant != null)
+                    {
+                        Destroy(instant);
+                    }
+                }
+                yield break; // Coroutine'i tamamen sonlandýr
+            }
+
+            // Düþmaný hedefe doðru hareket ettir
+            if (instant != null) // Güvenlik kontrolü
+            {
                 instant.transform.position = Vector3.MoveTowards(
                     instant.transform.position,
                     hedef.position,
                     speed * Time.deltaTime
                 );
-            difference = new Vector3(
-              instant.transform.position.x - hedef.position.x,
-              instant.transform.position.y - hedef.position.y,
-              instant.transform.position.z - hedef.position.z);
-            distance = Math.Sqrt(
-            Math.Pow(difference.x, 2f) +
-            Math.Pow(difference.y, 2f) +
-            Math.Pow(difference.z, 2f));
+            }
+
             yield return null; // Bir sonraki kareye kadar bekle
-        }
-        // Mesafe 0.5f'ye eþit veya daha küçükse
-        if (instant != null && Vector3.Distance(instant.transform.position, hedef.position) <= konum)
-        {
-            movementEnemy();
-            yield return new WaitForSeconds(1f); // 1 saniye bekle
-            Destroy(instant); // Düþmaný yok et
         }
     }
     IEnumerator wait()
     {
         yield return new WaitForSeconds(0.5f);
     }
-    void movementEnemy()
-    {
-        // 5 kez top fýrlatma iþlemi
-        if (counter < 5)
-        {
-            Debug.Log("top fýrlattý");
-            ballSpawner.Instance.ballInstant();
-            counter++;
-        }
-    }
+   
+   
 }
