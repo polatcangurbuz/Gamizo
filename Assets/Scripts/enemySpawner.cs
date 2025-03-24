@@ -10,7 +10,6 @@ public class enemySpawner : MonoBehaviour
     [SerializeField] float speed = 0.5f; // Hýz ve mesafe kontrolü
     [SerializeField] float spawnInterval = 5f; // Spawn aralýðý
     public GameObject instantEnemy;
-    int counter = 0; // Ateþ etme sayacý
     float timer = 0,tempmesafe; // Spawn zamanlayýcý
     Vector3 difference;
     double distance, konum = 0.3f;

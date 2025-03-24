@@ -1,12 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class characterHealth : MonoBehaviour
 {
-    public int health = 100;
-
     public static characterHealth Instance { get; private set; }
+
+    public event Action<int> OnHealthChanged; // Health deðiþtiðinde çaðrýlacak event
+
+    private int health = 100;
+    public int Health
+    {
+        get => health;
+        set
+        {
+            health = Mathf.Clamp(value, 0, 100); // 0-100 arasýnda sýnýrla
+            OnHealthChanged?.Invoke(health); // Deðiþiklik olduðunda event'i tetikle
+        }
+    }
 
     private void Awake()
     {
@@ -19,5 +29,4 @@ public class characterHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    }
+}
