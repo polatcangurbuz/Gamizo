@@ -10,6 +10,7 @@ public class ButtonManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 0;
         vignette = PostProcessManager.instance.vignette;
    
     }
@@ -31,6 +32,6 @@ public class ButtonManager : MonoBehaviour
             0f,   // Bitiþ deðeri
             5f    // Süre (3 saniye)
         ).SetEase(Ease.InOutQuad); // Yumuþak geçiþ için easing fonksiyonu
-
+        Time.timeScale = 1f;
     }
 }

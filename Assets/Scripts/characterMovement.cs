@@ -4,9 +4,10 @@ using UnityEngine;
 public class characterMovement : MonoBehaviour
 {
     [SerializeField] float forceSpeed = 2f;
+    [SerializeField] FixedJoystick joystick;
     Rigidbody rb;
     Vector3 temp;
-    Vector3 moveDirection = Vector3.zero;
+    Vector3 moveDirection;
 
     private void Awake()
     {
@@ -15,27 +16,24 @@ public class characterMovement : MonoBehaviour
 
     private void Update()
     {
-        // Input'u Update içinde kontrol et
-        moveDirection = Vector3.zero; // Her karede hareket yönünü sýfýrla
-
-        if (Input.GetKey(KeyCode.A)) moveDirection += Vector3.forward;
-        if (Input.GetKey(KeyCode.D)) moveDirection += Vector3.back;
-        if (Input.GetKey(KeyCode.W)) moveDirection += Vector3.up;
-        if (Input.GetKey(KeyCode.S)) moveDirection += Vector3.down;
+        moveDirection = Vector3.zero; // Önce vektörü sýfýrla
+        moveDirection.z = joystick.Horizontal;  // X ekseni için joystick kontrolü
+        moveDirection.y = joystick.Vertical;    // Z ekseni için joystick kontrolü
     }
+
+
 
     private void FixedUpdate()
     {
         // Pozisyon sýnýrlamasýný uygula
         temp = transform.position;
-        temp.y = Mathf.Clamp(temp.y, 1.624f, 2.713f); // 624
-        temp.z = Mathf.Clamp(temp.z, -0.288f, 0.879f);// 879 -288
+        temp.y = Mathf.Clamp(temp.y, 1.624f, 2.713f);
+        temp.z = Mathf.Clamp(temp.z, -0.288f, 0.879f);
         transform.position = temp;
 
-        // Update içinde belirlenen yöne kuvvet uygula
-        if (moveDirection != Vector3.zero)
-        {
-            rb.AddForce(moveDirection * forceSpeed);
-        }
+        // Hareketi uygula
+        rb.velocity = new Vector3(rb.velocity.x, moveDirection.y * forceSpeed, -moveDirection.z * forceSpeed);
     }
+
+
 }
