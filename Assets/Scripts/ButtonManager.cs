@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using DG.Tweening; // DOTween kütüphanesini dahil etmelisin.
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -8,13 +10,14 @@ public class ButtonManager : MonoBehaviour
     [SerializeField]  CanvasGroup canvasGroup;
     [SerializeField] GameObject gameCanvas;
     private Vignette vignette;
+    [SerializeField] GameObject optionsCanvas;
+    [SerializeField] Slider musicSlider;
 
 
     private void Start()
     {
         Time.timeScale = 0;
         vignette = PostProcessManager.instance.vignette;
-   
     }
 
     public void StartButton()
@@ -37,4 +40,25 @@ public class ButtonManager : MonoBehaviour
         Time.timeScale = 1f;
         gameCanvas.SetActive(true);
     }
+
+    public void OpenOptions()
+    {
+        optionsCanvas.SetActive(true);
+    }
+    
+    public void CloseOptions()
+    {
+        optionsCanvas.SetActive(false);
+    }
+
+    public void AdjustMusicVolume()
+    {
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().volume = musicSlider.value;
+    }
+
+    public void RetryButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 }
