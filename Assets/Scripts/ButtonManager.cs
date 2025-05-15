@@ -61,4 +61,19 @@ public class ButtonManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void LowButton()
+    {
+        QualitySettings.SetQualityLevel(0);
+    }
+    
+    public void MediumButton()
+    {
+        QualitySettings.SetQualityLevel(1);
+    }
+
+    public void HighButton()
+    {
+        QualitySettings.SetQualityLevel(2);
+    }
+
 }
