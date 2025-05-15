@@ -6,7 +6,9 @@ public class ButtonManager : MonoBehaviour
 {
   
     [SerializeField]  CanvasGroup canvasGroup;
+    [SerializeField] GameObject gameCanvas;
     private Vignette vignette;
+
 
     private void Start()
     {
@@ -33,5 +35,6 @@ public class ButtonManager : MonoBehaviour
             5f    // Süre (3 saniye)
         ).SetEase(Ease.InOutQuad); // Yumuþak geçiþ için easing fonksiyonu
         Time.timeScale = 1f;
+        gameCanvas.SetActive(true);
     }
 }
