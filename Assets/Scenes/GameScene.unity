@@ -2265,7 +2265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &785842080
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2406,17 +2406,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
   m_PrefabInstance: {fileID: 699683224}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &832580189 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
-  m_PrefabInstance: {fileID: 699683224}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &847465357
 GameObject:
   m_ObjectHideFlags: 0
@@ -3958,8 +3947,9 @@ GameObject:
   - component: {fileID: 1400180418}
   - component: {fileID: 1400180420}
   - component: {fileID: 1400180419}
-  - component: {fileID: 1400180422}
   - component: {fileID: 1400180421}
+  - component: {fileID: 1400180423}
+  - component: {fileID: 1400180424}
   m_Layer: 0
   m_Name: topuz
   m_TagString: Untagged
@@ -3975,7 +3965,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400180417}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.14608307, y: 0, z: 0, w: 0.98927236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3983,7 +3973,7 @@ Transform:
   - {fileID: 6645823806036400910}
   - {fileID: 8632055957437470681}
   m_Father: {fileID: 543450652296619732}
-  m_LocalEulerAnglesHint: {x: -16.8, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1400180419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4004,7 +3994,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400180417}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 940242c3ef6e9c44bb0f7815241902b7, type: 2}
   m_CullingMode: 0
@@ -4038,7 +4028,34 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.2316044
   m_Center: {x: 7.237405e-16, y: 0.7970544, z: -0.30092865}
---- !u!114 &1400180422
+--- !u!54 &1400180423
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400180417}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1400180424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4050,6 +4067,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5f41349d8c1ce48bad06c488289f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sensitivity: 0.3
+  currentX: 0
+  currentZ: 0
+  deltaX: 0
+  deltaY: 0
+  currentMousePos: {x: 0, y: 0, z: 0}
 --- !u!1 &1423939496
 GameObject:
   m_ObjectHideFlags: 0
@@ -5408,7 +5431,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceSpeed: 2
-  joystick: {fileID: 832580189}
+  movSpeed: 0.03
+  TopuzMovement: {fileID: 1400180424}
 --- !u!4 &1842614221 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4e96648cd9bfca14594b306b02500511, type: 3}
