@@ -7,6 +7,7 @@ public class HealthBar : MonoBehaviour
 
     private void Start()
     {
+       
         if (characterHealth.Instance != null)
         {
             characterHealth.Instance.OnHealthChanged += UpdateHealthBar; // Event'e abone ol
@@ -23,8 +24,8 @@ public class HealthBar : MonoBehaviour
     }
 
     private void UpdateHealthBar(int currentHealth)
-    {
-        healthImage.fillAmount = currentHealth / 100f;
+    {       
+        healthImage.transform.localScale = new Vector3((currentHealth / 100f), 1, 1);
         Debug.Log("Health Bar Güncellendi: " + healthImage.fillAmount);
     }
 }
