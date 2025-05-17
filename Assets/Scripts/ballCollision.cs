@@ -6,6 +6,8 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class ballCollision : MonoBehaviour
 {
+
+
     private ChromaticAberration ChromaticAberration;
    
     private void Start()
@@ -19,6 +21,8 @@ public class ballCollision : MonoBehaviour
         {
             if (characterHealth.Instance != null)
             {
+               
+                if(TypeWrite.Instance.isStoryFinished)
                 characterHealth.Instance.Health -= 10;
 
                 ParticleSystemManager.Instance.onParticleElectricityEffect();

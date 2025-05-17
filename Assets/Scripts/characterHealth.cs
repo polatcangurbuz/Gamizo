@@ -3,11 +3,13 @@ using UnityEngine;
 
 public class characterHealth : MonoBehaviour
 {
+   
     public static characterHealth Instance { get; private set; }
 
     public event Action<int> OnHealthChanged; // Health deðiþtiðinde çaðrýlacak event
 
-    private int health = 100;
+
+    public int health = 100;
     public int Health
     {
         get => health;
