@@ -56,7 +56,7 @@ public class ButtonManager : MonoBehaviour
         GameObject.Find("AudioManager").GetComponent<AudioSource>().volume = musicSlider.value;
     }
 
-    public void RetryButton()
+    public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

@@ -1,31 +1,63 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
 
-    bool isGameOver;
     [SerializeField] GameObject gameOverCanvas;
+    [SerializeField] GameObject gameWinCanvas;
+    [SerializeField] TextMeshProUGUI countdownText;
+
+
+    [SerializeField] float countdown = 120f;
 
     void Start()
     {
         
     }
 
-    
     void Update()
     {
-        if(characterHealth.Instance.Health <= 0)
+        int temp;
+
+        countdown -= Time.deltaTime;
+
+        countdown = Mathf.Clamp(countdown, 0f, 120f);
+
+        temp = (int)(countdown % 60f);
+
+        if(countdown > 60)
         {
-            isGameOver = true;
+            if(temp >= 10)
+            {
+                countdownText.text = ((int)(countdown / 60f)).ToString() + ":" + temp.ToString();
+            }
+            else
+            {
+                countdownText.text = ((int)(countdown / 60f)).ToString() + ":0" + temp.ToString();
+            }
         }
-        if(isGameOver)
+        else
+        {
+            countdownText.text = temp.ToString();
+        }
+
+        if (characterHealth.Instance.Health <= 0)
         {
             Time.timeScale = 0f;
             GameObject.Find("AudioManager").GetComponent<AudioSource>().mute = true;
             gameOverCanvas.SetActive(true);
         }
+        if(countdown <= 0)
+        {
+            Time.timeScale = 0f;
+            gameWinCanvas.SetActive(true);
+        }
 
     }
+
+
+
 }
