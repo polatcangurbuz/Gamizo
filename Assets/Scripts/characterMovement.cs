@@ -4,11 +4,14 @@ using UnityEngine;
 public class characterMovement : MonoBehaviour
 {
     [SerializeField] float forceSpeed = 2f;
-    [SerializeField] FixedJoystick joystick;
+
     Rigidbody rb;
     Vector3 temp;
     Vector3 moveDirection;
 
+    public float movSpeed = 0.08f;
+
+    [SerializeField] TopuzMovement TopuzMovement;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -17,8 +20,10 @@ public class characterMovement : MonoBehaviour
     private void Update()
     {
         moveDirection = Vector3.zero; // Önce vektörü sýfýrla
-        moveDirection.z = joystick.Horizontal;  // X ekseni için joystick kontrolü
-        moveDirection.y = joystick.Vertical;    // Z ekseni için joystick kontrolü
+        //moveDirection.z = joystick.Horizontal;  // X ekseni için joystick kontrolü
+        //moveDirection.y = joystick.Vertical;    // Z ekseni için joystick kontrolü
+        moveDirection.z = -TopuzMovement.currentZ * movSpeed;
+        moveDirection.y = -TopuzMovement.currentX * movSpeed ;
     }
 
 
