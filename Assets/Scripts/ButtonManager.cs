@@ -13,7 +13,6 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] GameObject optionsCanvas;
     [SerializeField] Slider musicSlider;
 
-
     private void Start()
     {
         Time.timeScale = 0;

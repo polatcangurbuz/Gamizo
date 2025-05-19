@@ -9,9 +9,14 @@ public class GameState : MonoBehaviour
     [SerializeField] GameObject gameOverCanvas;
     [SerializeField] GameObject gameWinCanvas;
     [SerializeField] TextMeshProUGUI countdownText;
+    [SerializeField] GameObject gameCanvas;
+    [SerializeField] GameObject storyPanel;
+    [SerializeField] AudioSource music;
 
 
     [SerializeField] float countdown = 120f;
+
+    bool isPlaying;
 
     void Start()
     {
@@ -20,29 +25,47 @@ public class GameState : MonoBehaviour
 
     void Update()
     {
-        int temp;
-
-        countdown -= Time.deltaTime;
-
-        countdown = Mathf.Clamp(countdown, 0f, 120f);
-
-        temp = (int)(countdown % 60f);
-
-        if(countdown > 60)
+        if (gameCanvas.activeSelf && storyPanel.activeSelf == false)
+            isPlaying = true;
+        else if (gameCanvas.activeSelf && music.isPlaying)
         {
-            if(temp >= 10)
+            music.Stop();
+        }
+
+
+        if (isPlaying)
+        {
+            if(music.isPlaying == false)
             {
-                countdownText.text = ((int)(countdown / 60f)).ToString() + ":" + temp.ToString();
+                music.Play();
+            }
+
+            int temp;
+
+            countdown -= Time.deltaTime;
+
+            countdown = Mathf.Clamp(countdown, 0f, 120f);
+
+            temp = (int)(countdown % 60f);
+
+            if (countdown > 60)
+            {
+                if (temp >= 10)
+                {
+                    countdownText.text = ((int)(countdown / 60f)).ToString() + ":" + temp.ToString();
+                }
+                else
+                {
+                    countdownText.text = ((int)(countdown / 60f)).ToString() + ":0" + temp.ToString();
+                }
             }
             else
             {
-                countdownText.text = ((int)(countdown / 60f)).ToString() + ":0" + temp.ToString();
+                countdownText.text = temp.ToString();
             }
         }
-        else
-        {
-            countdownText.text = temp.ToString();
-        }
+
+
 
         if (characterHealth.Instance.Health <= 0)
         {
