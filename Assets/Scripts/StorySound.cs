@@ -12,10 +12,15 @@ public class StorySound : MonoBehaviour
 
     public void MusicPlayFunction(int index)
     {
+        // Index kontrolü
+        if (index < 0 || index >= storyClip.Count || storyClip == null || storyClip.Count == 0)
+        {
+            Debug.LogWarning("Geçersiz ses indexi veya ses listesi boş!");
+            return;
+        }
+
+        // Ses çalma işlemi
         audioSource.clip = storyClip[index];
         audioSource.Play();
     }
-
-
-
 }

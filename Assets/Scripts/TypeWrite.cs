@@ -13,8 +13,8 @@ public class TypeWrite : MonoBehaviour
     private string fullText;
 
     // [SerializeField] List<TextMeshProUGUI> StoryTextList;
-    private TextMeshProUGUI tempTMP;
-    [SerializeField] List<GameObject> StoryList;
+    private TextMeshPro tempTMP;
+    public List<GameObject> StoryList;
     StorySound StorySound;
 
     public bool isStoryFinished;
@@ -39,13 +39,13 @@ public class TypeWrite : MonoBehaviour
         {
             StoryList[j].SetActive(true);
             StorySound.MusicPlayFunction(j);
-            tempTMP = StoryList[j].GetComponent<TextMeshProUGUI>();
+            tempTMP = StoryList[j].GetComponent<TextMeshPro>();
             /*textDisplay.text = "*/
             fullText = tempTMP.text;
-            StoryList[j].GetComponent<TextMeshProUGUI>().text = "";
+            StoryList[j].GetComponent<TextMeshPro>().text = "";
             for (int i = 0; i < fullText.Length; i++)
             {
-                StoryList[j].GetComponent<TextMeshProUGUI>().text += fullText[i];
+                StoryList[j].GetComponent<TextMeshPro>().text += fullText[i];
                 yield return new WaitForSeconds(typingSpeed);
             }
             yield return new WaitForSeconds(7f);
