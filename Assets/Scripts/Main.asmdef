@@ -1,0 +1,22 @@
+{
+    "name": "Main",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Postprocessing.Runtime",
+        "Unity.TextMeshPro.Editor",
+        "Unity.TextMeshPro",
+        "DoTween.Modules",
+        "Unity.Postprocessing.Editor",
+        "Unity.Postprocessing.Editor.Tests",
+        "Unity.Postprocessing.Runtime.Tests"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

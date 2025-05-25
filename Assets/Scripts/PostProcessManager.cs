@@ -29,6 +29,5 @@ public class PostProcessManager : MonoBehaviour
         }
     }
 
+  }
 
-
-}
