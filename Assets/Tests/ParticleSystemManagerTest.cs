@@ -47,6 +47,7 @@ public class ParticleSystemManagerTest
         Assert.IsNotNull(particleSystem);
     }
 
+
     [UnityTest]
     public IEnumerator ParticleSystem_CanPlay()
     {
