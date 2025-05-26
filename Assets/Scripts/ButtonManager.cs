@@ -9,6 +9,7 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private GameObject gameCanvas;
     [SerializeField] private GameObject optionsCanvas;
+    [SerializeField] private GameObject chatCanvas;
     [SerializeField] private Slider musicSlider;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private Vignette vignette;
@@ -56,4 +57,7 @@ public class ButtonManager : MonoBehaviour
     public void LowButton() => QualitySettings.SetQualityLevel(0);
     public void MediumButton() => QualitySettings.SetQualityLevel(1);
     public void HighButton() => QualitySettings.SetQualityLevel(2);
+
+    public void OpenChat() { chatCanvas.SetActive(true); }
+    public void CloseChat() { chatCanvas.SetActive(false); }
 }
