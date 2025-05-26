@@ -10,5 +10,5 @@ jobs:
 
       - uses: game-ci/unity-request-activation@v2
         with:
-          unityVersion: 2022.3.18f1
+          unityVersion: 2022.3.18f1  # ✅ Sadece düz string
           email: ${{ secrets.UNITY_EMAIL }}
