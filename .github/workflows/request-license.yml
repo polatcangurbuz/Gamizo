@@ -8,9 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Request manual activation file (alf)
+      - name: Create license request
         uses: game-ci/unity-activate@v2
         with:
-          unityVersion: 2022.3.18f1
-          activationMode: manual
-          email: ${{ secrets.UNITY_EMAIL }}
+          unityVersion: 2021.3.16f1
