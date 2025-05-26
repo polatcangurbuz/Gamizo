@@ -1,12 +1,6 @@
 name: Test package
 
-on:
-  push:
-    branches:
-      - test
-  pull_request:
-    branches:
-      - test
+on: [push, pull_request]
 
 jobs:
   testAllModes:
@@ -17,16 +11,14 @@ jobs:
       matrix:
         projectPath:
           - test-package
-        unityVersion: '2020.3.18f1'
+        unityVersion: '2022.3.18f1' # some version must be included for package testing
         testMode:
           - playmode
           - editmode
-
     steps:
       - uses: actions/checkout@v4
         with:
           lfs: true
-
       - uses: game-ci/unity-test-runner@v4
         id: tests
         env:
@@ -42,13 +34,11 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           checkName: ${{ matrix.testMode }} Test Results
           coverageOptions: 'generateAdditionalMetrics;generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*'
-
       - uses: actions/upload-artifact@v3
         if: always()
         with:
           name: Test results for ${{ matrix.testMode }}
           path: ${{ steps.tests.outputs.artifactsPath }}
-
       - uses: actions/upload-artifact@v3
         if: always()
         with:
