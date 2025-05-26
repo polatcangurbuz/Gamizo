@@ -1,0 +1,14 @@
+name: Request Unity license
+
+on: workflow_dispatch
+
+jobs:
+  requestLicense:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: game-ci/unity-request-activation@v2
+        with:
+          unityVersion: 2022.3.18f1
+          email: ${{ secrets.UNITY_EMAIL }}
