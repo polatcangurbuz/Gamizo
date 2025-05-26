@@ -8,7 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: game-ci/unity-request-activation@v2
+      - name: Request manual activation file (alf)
+        uses: game-ci/unity-activate@v2
         with:
-          unityVersion: 2022.3.18f1  # ✅ Sadece düz string
+          unityVersion: 2022.3.18f1
+          activationMode: manual
           email: ${{ secrets.UNITY_EMAIL }}
