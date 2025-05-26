@@ -2814,6 +2814,8 @@ MonoBehaviour:
   gameCanvas: {fileID: 714430759}
   optionsCanvas: {fileID: 1893208601}
   musicSlider: {fileID: 1747266236}
+  audioSource: {fileID: 2132035962}
+  vignette: {fileID: 0}
 --- !u!4 &767309671
 Transform:
   m_ObjectHideFlags: 0
@@ -6000,12 +6002,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 028214b0afacfca48bc2433912cc4174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navigate: {fileID: 71330693}
-  enemy: {fileID: 3114251912634209114, guid: f73a472ead4e8354c93928fb2a46af5c, type: 3}
-  hedef: {fileID: 1842614221}
+  spawnPoint: {fileID: 71330693}
+  enemyPrefab: {fileID: 3114251912634209114, guid: f73a472ead4e8354c93928fb2a46af5c, type: 3}
+  target: {fileID: 1842614221}
   speed: 0.5
   spawnInterval: 5
-  instantEnemy: {fileID: 0}
 --- !u!4 &1773551166
 Transform:
   m_ObjectHideFlags: 0

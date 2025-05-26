@@ -1,78 +1,59 @@
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
-using DG.Tweening; // DOTween kütüphanesini dahil etmelisin.
+using DG.Tweening;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-  
-    [SerializeField]  CanvasGroup canvasGroup;
-    [SerializeField] GameObject gameCanvas;
-    private Vignette vignette;
-    [SerializeField] GameObject optionsCanvas;
-    [SerializeField] Slider musicSlider;
+    [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private GameObject gameCanvas;
+    [SerializeField] private GameObject optionsCanvas;
+    [SerializeField] private Slider musicSlider;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private Vignette vignette;
 
     private void Start()
     {
-        Time.timeScale = 0;
-        vignette = PostProcessManager.instance.vignette;
+        Time.timeScale = 0f;
+        if (vignette == null && PostProcessManager.instance != null)
+        {
+            vignette = PostProcessManager.instance.vignette;
+        }
     }
 
     public void StartButton()
-    {        
+    {
         if (vignette == null) return;
 
-        canvasGroup.DOFade(0f, 1f).OnComplete(() => {
-            canvasGroup.gameObject.SetActive(false); // Tamamen görünmez olduktan sonra devre dýþý býrak
+        canvasGroup.DOFade(0f, 1f).OnComplete(() =>
+        {
+            canvasGroup.gameObject.SetActive(false);
         });
 
-        // Vignette yoðunluðunu 1'den 0'a belirli bir süre içinde düþür
-        vignette.intensity.value = 1f; // Önlem amaçlý tekrar 1'e ayarlýyoruz.
+        vignette.intensity.value = 1f;
+        DOTween.To(() => vignette.intensity.value,
+                   x => vignette.intensity.value = x,
+                   0f, 5f).SetEase(Ease.InOutQuad);
 
-        DOTween.To(
-            () => vignette.intensity.value,   // Baþlangýç deðeri
-            x => vignette.intensity.value = x, // Güncelleme fonksiyonu
-            0f,   // Bitiþ deðeri
-            5f    // Süre (3 saniye)
-        ).SetEase(Ease.InOutQuad); // Yumuþak geçiþ için easing fonksiyonu
         Time.timeScale = 1f;
         gameCanvas.SetActive(true);
     }
 
-    public void OpenOptions()
-    {
-        optionsCanvas.SetActive(true);
-    }
-    
-    public void CloseOptions()
-    {
-        optionsCanvas.SetActive(false);
-    }
+    public void OpenOptions() => optionsCanvas.SetActive(true);
+    public void CloseOptions() => optionsCanvas.SetActive(false);
 
     public void AdjustMusicVolume()
     {
-        GameObject.Find("AudioManager").GetComponent<AudioSource>().volume = musicSlider.value;
+        if (audioSource != null && musicSlider != null)
+        {
+            audioSource.volume = musicSlider.value;
+        }
     }
 
-    public void ReloadScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+    public void ReloadScene() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-    public void LowButton()
-    {
-        QualitySettings.SetQualityLevel(0);
-    }
-    
-    public void MediumButton()
-    {
-        QualitySettings.SetQualityLevel(1);
-    }
-
-    public void HighButton()
-    {
-        QualitySettings.SetQualityLevel(2);
-    }
-
+    public void LowButton() => QualitySettings.SetQualityLevel(0);
+    public void MediumButton() => QualitySettings.SetQualityLevel(1);
+    public void HighButton() => QualitySettings.SetQualityLevel(2);
 }

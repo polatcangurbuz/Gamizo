@@ -1,86 +1,59 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
+    [SerializeField] private GameObject gameOverCanvas;
+    [SerializeField] private GameObject gameWinCanvas;
+    [SerializeField] private TextMeshProUGUI countdownText;
+    [SerializeField] private GameObject gameCanvas;
+    [SerializeField] private GameObject storyPanel;
+    [SerializeField] private AudioSource music;
+    [SerializeField] private AudioSource audioSource;
 
-    [SerializeField] GameObject gameOverCanvas;
-    [SerializeField] GameObject gameWinCanvas;
-    [SerializeField] TextMeshProUGUI countdownText;
-    [SerializeField] GameObject gameCanvas;
-    [SerializeField] GameObject storyPanel;
-    [SerializeField] AudioSource music;
+    [SerializeField] private float countdown = 120f;
+    private bool isPlaying = false;
 
-
-    [SerializeField] float countdown = 120f;
-
-    bool isPlaying;
-
-    void Start()
+    private void Update()
     {
-        
-    }
-
-    void Update()
-    {
-        if (gameCanvas.activeSelf && storyPanel.activeSelf == false)
+        if (gameCanvas.activeSelf && !storyPanel.activeSelf)
+        {
             isPlaying = true;
+        }
         else if (gameCanvas.activeSelf && music.isPlaying)
         {
             music.Stop();
         }
 
-
         if (isPlaying)
         {
-            if(music.isPlaying == false)
+            if (!music.isPlaying)
             {
                 music.Play();
             }
 
-            int temp;
-
             countdown -= Time.deltaTime;
-
             countdown = Mathf.Clamp(countdown, 0f, 120f);
 
-            temp = (int)(countdown % 60f);
+            int minutes = (int)(countdown / 60f);
+            int seconds = (int)(countdown % 60f);
 
-            if (countdown > 60)
-            {
-                if (temp >= 10)
-                {
-                    countdownText.text = ((int)(countdown / 60f)).ToString() + ":" + temp.ToString();
-                }
-                else
-                {
-                    countdownText.text = ((int)(countdown / 60f)).ToString() + ":0" + temp.ToString();
-                }
-            }
-            else
-            {
-                countdownText.text = temp.ToString();
-            }
+            countdownText.text = countdown > 60 ?
+                string.Format("{0}:{1:00}", minutes, seconds) :
+                seconds.ToString();
         }
 
-
-
-        if (characterHealth.Instance.Health <= 0)
+        if (characterHealth.Instance != null && characterHealth.Instance.Health <= 0)
         {
             Time.timeScale = 0f;
-            GameObject.Find("AudioManager").GetComponent<AudioSource>().mute = true;
+            if (audioSource != null) audioSource.mute = true;
             gameOverCanvas.SetActive(true);
         }
-        if(countdown <= 0)
+
+        if (countdown <= 0)
         {
             Time.timeScale = 0f;
             gameWinCanvas.SetActive(true);
         }
-
     }
-
-
-
 }
