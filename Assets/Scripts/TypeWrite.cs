@@ -48,7 +48,7 @@ public class TypeWrite : MonoBehaviour
                 StoryList[j].GetComponent<TextMeshProUGUI>().text += fullText[i];
                 yield return new WaitForSeconds(typingSpeed);
             }
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(5.5f);
             StoryList[j].SetActive(false);
         }
         this.gameObject.SetActive(false);
