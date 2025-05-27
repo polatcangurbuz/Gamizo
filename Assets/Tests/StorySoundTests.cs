@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using System.Reflection;
 
-public class StorySoundTests
+public class StorySoundTests : TestBase
 {
     private GameObject storySoundObject;
     private StorySound storySound;
@@ -15,6 +15,9 @@ public class StorySoundTests
     [SetUp]
     public void Setup()
     {
+        // Call base setup to ensure AudioListener exists
+        base.BaseSetUp();
+
         // Test için gerekli GameObject ve component'leri oluştur
         storySoundObject = new GameObject();
         storySound = storySoundObject.AddComponent<StorySound>();
@@ -54,17 +57,17 @@ public class StorySoundTests
     [TearDown]
     public void TearDown()
     {
-        // Test sonrası temizlik
-        Object.Destroy(storySoundObject);
+        base.BaseTearDown();
         
+        if (storySoundObject != null)
+            Object.DestroyImmediate(storySoundObject);
+            
         if (testClips != null)
         {
             foreach (var clip in testClips)
             {
                 if (clip != null)
-                {
-                    Object.Destroy(clip);
-                }
+                    Object.DestroyImmediate(clip);
             }
         }
     }

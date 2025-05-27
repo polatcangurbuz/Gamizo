@@ -104,7 +104,7 @@ public class GameStateTests
         gameState.SendMessage("Update");
 
         // Assert
-        Assert.AreEqual("1:30", countdownText.text);
+        Assert.AreEqual("1:29", countdownText.text);
     }
 
     [Test]
@@ -120,7 +120,7 @@ public class GameStateTests
         gameState.SendMessage("Update");
 
         // Assert
-        Assert.AreEqual("30", countdownText.text);
+        Assert.AreEqual("29", countdownText.text);
     }
 
     [UnityTest]

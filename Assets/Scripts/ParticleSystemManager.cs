@@ -8,7 +8,7 @@ public class ParticleSystemManager : MonoBehaviour
     [SerializeField] GameObject electricityEffect;
     ParticleSystem _particleSystem;
 
-    public static ParticleSystemManager Instance {  get; private set; }
+    public static ParticleSystemManager Instance { get; protected set; }
 
     private void Awake()
     {
@@ -18,7 +18,7 @@ public class ParticleSystemManager : MonoBehaviour
 
 
 
-    public void onParticleElectricityEffect()
+    public virtual void onParticleElectricityEffect()
     {
         if (_particleSystem == null) return;
             _particleSystem.Play();

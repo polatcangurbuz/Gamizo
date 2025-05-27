@@ -18,7 +18,7 @@ public class enemySpawnerTests
 
         // Create enemy prefab
         enemyPrefab = new GameObject("EnemyPrefab");
-        enemyPrefab.AddComponent<Collider>();
+        enemyPrefab.AddComponent<BoxCollider>();
 
         // Create target
         targetObject = new GameObject("Target");
@@ -61,10 +61,12 @@ public class enemySpawnerTests
         enemy.transform.position = Vector3.zero;
         targetObject.transform.position = Vector3.forward;
 
-        // Create mock ballSpawner instance
+        // Create mock ballSpawner instance with properly setup ball prefab
         GameObject ballSpawnerObject = new GameObject("BallSpawner");
+        GameObject ballPrefab = new GameObject("BallPrefab");
+        ballPrefab.AddComponent<SphereCollider>();
         var ballSpawnerComponent = ballSpawnerObject.AddComponent<ballSpawner>();
-        ballSpawnerComponent.ballPrefab = new GameObject("BallPrefab");
+        ballSpawnerComponent.ballPrefab = ballPrefab;
 
         // Act - Start the coroutine (would need to expose this method or test integration)
         Vector3 initialPosition = enemy.transform.position;

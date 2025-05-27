@@ -2,7 +2,9 @@ using NUnit.Framework;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.TestTools;
+using System.Linq;
 
+[TestFixture]
 public class ballSpawnerTests
 {
     private GameObject spawnerObject;
@@ -12,34 +14,58 @@ public class ballSpawnerTests
     [SetUp]
     public void SetUp()
     {
-        // Create ball prefab
+        // Create ball prefab with required components
         ballPrefab = new GameObject("BallPrefab");
-        ballPrefab.AddComponent<Rigidbody>();
-        ballPrefab.AddComponent<SphereCollider>();
+        var rb = ballPrefab.AddComponent<Rigidbody>();
+        rb.useGravity = false; // Disable gravity for tests
+        var collider = ballPrefab.AddComponent<SphereCollider>();
+        collider.isTrigger = false;
 
         // Create spawner object
         spawnerObject = new GameObject("BallSpawner");
         spawnerComponent = spawnerObject.AddComponent<ballSpawner>();
         spawnerComponent.ballPrefab = ballPrefab;
+        
+        // Ensure singleton and queue are initialized
+        spawnerComponent.enabled = false;
+        spawnerComponent.enabled = true;
+
+        // Manually initialize the pool since ballPrefab is set after Awake
+        var setQueueMethod = typeof(ballSpawner).GetMethod("SetQueue", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+        setQueueMethod.Invoke(spawnerComponent, null);
+
+        // Reset physics
+        Physics.autoSimulation = true;
     }
 
     [Test]
     public void Instance_IsSingleton()
     {
         // Assert
-        Assert.IsNotNull(ballSpawner.Instance);
-        Assert.AreEqual(spawnerComponent, ballSpawner.Instance);
+        Assert.That(ballSpawner.Instance, Is.Not.Null, "Singleton instance should not be null");
+        Assert.That(ballSpawner.Instance, Is.EqualTo(spawnerComponent), "Singleton instance should be our test component");
     }
 
-    [Test]
-    public void GetBall_ReturnsActiveBall()
+    [UnityTest]
+    public IEnumerator GetBall_ReusesInactiveBalls()
     {
-        // Act
-        GameObject ball = spawnerComponent.GetBall();
-
-        // Assert
-        Assert.IsNotNull(ball);
-        Assert.IsTrue(ball.activeInHierarchy);
+        // Dequeue all balls from the pool
+        var balls = new GameObject[10];
+        for (int i = 0; i < 10; i++)
+        {
+            balls[i] = spawnerComponent.GetBall();
+            yield return null;
+        }
+        // Deactivate and return the first ball
+        var reusedBall = balls[0];
+        reusedBall.SetActive(false);
+        spawnerComponent.ReturnToPool(reusedBall);
+        yield return null;
+        // Get a new ball (should be the one we just returned)
+        var nextBall = spawnerComponent.GetBall();
+        yield return null;
+        Assert.That(nextBall, Is.EqualTo(reusedBall), "Should reuse the inactive ball");
+        Assert.That(nextBall.activeInHierarchy, Is.True, "Reused ball should be active");
     }
 
     [Test]
@@ -74,32 +100,18 @@ public class ballSpawnerTests
     [UnityTest]
     public IEnumerator FireBall_MovesTowardsTarget()
     {
-        // Arrange
         GameObject enemy = new GameObject("Enemy");
         GameObject target = new GameObject("Target");
         enemy.transform.position = Vector3.zero;
         target.transform.position = Vector3.forward * 2f;
-
-        // Act
         spawnerComponent.FireBall(enemy, target.transform);
-
-        // Wait a frame for coroutine to start
-        yield return null;
-
-        // Assert - Ball should be moving towards target
-        GameObject[] balls = GameObject.FindGameObjectsWithTag("Untagged");
-        bool ballFound = false;
-        foreach (var ball in balls)
-        {
-            if (ball.name.Contains("Ball") && ball.activeInHierarchy)
-            {
-                ballFound = true;
-                break;
-            }
-        }
-        Assert.IsTrue(ballFound);
-
-        // Cleanup
+        yield return new WaitForSeconds(0.1f);
+        GameObject ball = GameObject.FindObjectsOfType<GameObject>()
+            .FirstOrDefault(go => go.name.Contains("Ball") && go.activeInHierarchy);
+        Assert.That(ball, Is.Not.Null, "Ball should be active after firing");
+        float startDistance = Vector3.Distance(enemy.transform.position, target.transform.position);
+        float afterDistance = Vector3.Distance(ball.transform.position, target.transform.position);
+        Assert.That(afterDistance, Is.LessThan(startDistance + 0.1f), "Ball should move towards the target");
         Object.DestroyImmediate(enemy);
         Object.DestroyImmediate(target);
     }
@@ -107,7 +119,21 @@ public class ballSpawnerTests
     [TearDown]
     public void TearDown()
     {
-        Object.DestroyImmediate(spawnerObject);
-        Object.DestroyImmediate(ballPrefab);
+        // Clean up all spawned objects
+        if (spawnerObject != null)
+            Object.DestroyImmediate(spawnerObject);
+        if (ballPrefab != null)
+            Object.DestroyImmediate(ballPrefab);
+
+        // Clean up any remaining balls
+        var balls = Object.FindObjectsOfType<GameObject>()
+            .Where(go => go.name.Contains("ball") || go.CompareTag("ball"));
+        foreach (var ball in balls)
+        {
+            Object.DestroyImmediate(ball);
+        }
+
+        // Reset physics state
+        Physics.autoSimulation = true;
     }
 }

@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class MockTopuzMovement : MonoBehaviour
+public class MockTopuzMovement : TopuzMovement
 {
-    public float currentX = 0f;
-    public float currentZ = 0f;
+    // The test can set currentX and currentZ directly, as in the base class
 }

@@ -18,7 +18,7 @@ public class ballCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (characterHealth.Instance != null && TypeWrite.Instance.isStoryFinished)
+            if (characterHealth.Instance != null && (TypeWrite.Instance?.isStoryFinished ?? false))
             {
                 characterHealth.Instance.Health -= 10;
                 ParticleSystemManager.Instance?.onParticleElectricityEffect();

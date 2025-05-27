@@ -14,16 +14,25 @@ public class ballSpawner : MonoBehaviour
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
+            return;
         }
-        else
+        Instance = this;
+
+        // Only initialize the queue if we have a valid prefab
+        if (ballPrefab != null)
         {
-            Instance = this;
+            SetQueue();
         }
-        SetQueue();
     }
 
     private void SetQueue()
     {
+        if (ballPrefab == null)
+        {
+            Debug.LogError("Ball prefab is not set!");
+            return;
+        }
+
         for (int i = 0; i < 10; i++)
         {
             GameObject ball = Instantiate(ballPrefab);

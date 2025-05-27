@@ -18,7 +18,7 @@ public class characterHealthTests
     {
         // Assert
         Assert.IsNotNull(characterHealth.Instance);
-        Assert.AreEqual(healthComponent, characterHealth.Instance);
+        Assert.AreSame(healthComponent, characterHealth.Instance, "Instance should be the same object reference");
     }
 
     [Test]
