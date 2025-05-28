@@ -39,7 +39,7 @@ public class ballSpawnerTests
     }
 
     [Test]
-    public void Instance_IsSingleton()
+    public void TekilNesneMi()
     {
         // Assert
         Assert.That(ballSpawner.Instance, Is.Not.Null, "Singleton instance should not be null");
@@ -47,7 +47,7 @@ public class ballSpawnerTests
     }
 
     [UnityTest]
-    public IEnumerator GetBall_ReusesInactiveBalls()
+    public IEnumerator TopuAl_KullanilmayanToplariYenidenKullanir()
     {
         // Dequeue all balls from the pool
         var balls = new GameObject[10];
@@ -69,7 +69,7 @@ public class ballSpawnerTests
     }
 
     [Test]
-    public void ReturnToPool_DeactivatesBall()
+    public void HavuzdaGeriBirak_TopuDevreDisiBirakir()
     {
         // Arrange
         GameObject ball = spawnerComponent.GetBall();
@@ -82,7 +82,7 @@ public class ballSpawnerTests
     }
 
     [Test]
-    public void GetBall_WhenPoolEmpty_ReturnsNull()
+    public void TopuAl_HavuzBosIse_NullDondurur()
     {
         // Arrange - Get all balls from pool
         for (int i = 0; i < 15; i++) // More than initial pool size
@@ -98,7 +98,7 @@ public class ballSpawnerTests
     }
 
     [UnityTest]
-    public IEnumerator FireBall_MovesTowardsTarget()
+    public IEnumerator TopuFirlat_HedefeDogruHareketEder()
     {
         GameObject enemy = new GameObject("Enemy");
         GameObject target = new GameObject("Target");

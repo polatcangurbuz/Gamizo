@@ -38,7 +38,7 @@ public class ButtonManagerTests
     }
 
     [Test]
-    public void OpenOptions_ActivatesOptionsCanvas()
+    public void SecenekleriAc_SeceneklerCanvasiniAktiflestirir()
     {
         // Arrange
         optionsCanvasObject.SetActive(false);
@@ -51,7 +51,7 @@ public class ButtonManagerTests
     }
 
     [Test]
-    public void CloseOptions_DeactivatesOptionsCanvas()
+    public void SecenekleriKapat_SeceneklerCanvasiniDevreDisiBirakir()
     {
         // Arrange
         optionsCanvasObject.SetActive(true);
@@ -64,7 +64,7 @@ public class ButtonManagerTests
     }
 
     [Test]
-    public void LowButton_SetsQualityToLow()
+    public void DusukButon_KalitesiniDusugeAyarlar()
     {
         // Act
         buttonManager.LowButton();
@@ -74,7 +74,7 @@ public class ButtonManagerTests
     }
 
     [Test]
-    public void MediumButton_SetsQualityToMedium()
+    public void OrtaButon_KalitesiniOrtayaAyarlar()
     {
         // Act
         buttonManager.MediumButton();
@@ -84,7 +84,7 @@ public class ButtonManagerTests
     }
 
     [Test]
-    public void HighButton_SetsQualityToHigh()
+    public void YuksekButon_KalitesiniYuksegeAyarlar()
     {
         // Act
         buttonManager.HighButton();
@@ -94,7 +94,7 @@ public class ButtonManagerTests
     }
 
     [Test]
-    public void AdjustMusicVolume_UpdatesAudioSourceVolume()
+    public void MuzikSesiniAyarla_AudioSourceSesiniGunceller()
     {
         // Arrange
         GameObject audioObject = new GameObject("AudioSource");

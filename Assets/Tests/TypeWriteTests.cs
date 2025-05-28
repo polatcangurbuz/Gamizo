@@ -33,7 +33,7 @@ public class TypeWriteTests
     }
 
     [Test]
-    public void TypeWrite_InitialState_IsCorrect()
+    public void TypeWrite_IlkDurum_DogruMu()
     {
         Assert.IsNotNull(typeWrite);
         Assert.AreEqual(0.05f, typeWrite.typingSpeed);
@@ -41,14 +41,14 @@ public class TypeWriteTests
     }
 
     [Test]
-    public void TypeWrite_StoryList_IsInitialized()
+    public void TypeWrite_HikayeListesi_BaslatildiMi()
     {
         Assert.IsNotNull(typeWrite.StoryList);
         Assert.AreEqual(1, typeWrite.StoryList.Count);
     }
 
     [Test]
-    public void TypeWrite_Instance_IsSet()
+    public void TypeWrite_TekilNesne_AyarlandiMi()
     {
         Assert.IsNotNull(TypeWrite.Instance);
         Assert.AreEqual(typeWrite, TypeWrite.Instance);

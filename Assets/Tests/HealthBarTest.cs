@@ -55,7 +55,7 @@ public class HealthBarTest
     }
 
     [UnityTest]
-    public IEnumerator HealthBar_InitializesCorrectly()
+    public IEnumerator HealthBar_DogruBaslat()
     {
         // Arrange & Act - Start method otomatik çalýþýr
         yield return null;
@@ -70,7 +70,7 @@ public class HealthBarTest
     }
 
     [UnityTest]
-    public IEnumerator HealthBar_UpdatesWhenHealthChanges()
+    public IEnumerator HealthBar_CanGidinceUpdate()
     {
         yield return null; // Setup tamamlansýn
 
@@ -87,7 +87,7 @@ public class HealthBarTest
     }
 
     [UnityTest]
-    public IEnumerator HealthBar_UpdatesWithZeroHealth()
+    public IEnumerator HealthBar_CanSifirken_Update()
     {
         yield return null;
 
@@ -104,7 +104,7 @@ public class HealthBarTest
     }
 
     [UnityTest]
-    public IEnumerator HealthBar_UpdatesWithFullHealth()
+    public IEnumerator HealthBar_CanFull_Update()
     {
         yield return null;
 
@@ -121,7 +121,7 @@ public class HealthBarTest
     }
 
     [UnityTest]
-    public IEnumerator HealthBar_HandlesMultipleHealthChanges()
+    public IEnumerator HealthBar_BirdenFazlaCanDegisikligi()
     {
         yield return null;
 
@@ -141,7 +141,7 @@ public class HealthBarTest
     }
 
     [UnityTest]
-    public IEnumerator HealthBar_UnsubscribesOnDestroy()
+    public IEnumerator HealthBar_DestroySirasinda()
     {
         yield return null;
 

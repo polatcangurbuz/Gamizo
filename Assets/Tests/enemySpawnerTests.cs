@@ -46,7 +46,7 @@ public class enemySpawnerTests
     }
 
     [Test]
-    public void Update_SpawnsEnemyAfterInterval()
+    public void Update_HerSureSonrasiSpawn()
     {
         // This test would require manipulating Time.time or using integration testing
         // For unit testing, we'd need to refactor the spawner to be more testable
@@ -54,7 +54,7 @@ public class enemySpawnerTests
     }
 
     [UnityTest]
-    public IEnumerator MoveEnemy_MovesTowardsTarget()
+    public IEnumerator DusmanHareketi_HedefeGidiyorMu()
     {
         // Arrange
         GameObject enemy = Object.Instantiate(enemyPrefab);

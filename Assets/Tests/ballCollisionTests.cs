@@ -71,7 +71,7 @@ public class ballCollisionTests
     }
 
     [UnityTest]
-    public IEnumerator OnCollisionEnter_WithPlayerTag_ReducesHealth()
+    public IEnumerator Carpisma_OyuncuEtiketiSaglikAzalir()
     {
         // Arrange
         Assert.That(characterHealth.Instance.Health, Is.EqualTo(100), "Initial health should be 100");
@@ -93,7 +93,7 @@ public class ballCollisionTests
     }
 
     [UnityTest]
-    public IEnumerator OnCollisionEnter_WithNonPlayerTag_DoesNotReduceHealth()
+    public IEnumerator Carpisma_OyuncuOlmayanEtiketSaglikAzalmaz()
     {
         // Arrange
         var nonPlayerObject = new GameObject("Enemy");
@@ -121,7 +121,7 @@ public class ballCollisionTests
     }
 
     [UnityTest]
-    public IEnumerator OnCollisionEnter_WhenStoryNotFinished_DoesNotReduceHealth()
+    public IEnumerator Carpisma_HikayeBitmemisseSaglikAzalmaz()
     {
         // Arrange
         var typeWrite = GameObject.FindObjectOfType<MockTypeWrite>();

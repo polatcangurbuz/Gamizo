@@ -14,7 +14,7 @@ public class characterHealthTests
     }
 
     [Test]
-    public void Instance_IsSingleton()
+    public void TekilNesneMi()
     {
         // Assert
         Assert.IsNotNull(characterHealth.Instance);
@@ -22,14 +22,14 @@ public class characterHealthTests
     }
 
     [Test]
-    public void Health_InitialValue_Is100()
+    public void Saglik_BaslangicDegeri_100_Olmali()
     {
         // Assert
         Assert.AreEqual(100, healthComponent.Health);
     }
 
     [Test]
-    public void Health_SetValue_ClampsToValidRange()
+    public void Saglik_DegerAyarla_GecerliAraliktaKalir()
     {
         // Test upper bound
         healthComponent.Health = 150;
@@ -45,7 +45,7 @@ public class characterHealthTests
     }
 
     [Test]
-    public void Health_OnHealthChanged_EventTriggered()
+    public void Saglik_SaglikDegisti_EventTetiklenirMi()
     {
         // Arrange
         bool eventTriggered = false;
@@ -65,7 +65,7 @@ public class characterHealthTests
     }
 
     [Test]
-    public void Health_MultipleSubscribers_AllReceiveEvent()
+    public void Saglik_BirdenFazlaIse_TumOlayiAlir()
     {
         // Arrange
         int subscriber1Health = -1;

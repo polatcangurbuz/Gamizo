@@ -23,26 +23,26 @@ public class JoystickButtonControlTest
     }
 
     [Test]
-    public void JoystickButton_GameObjectExists()
+    public void JoystickButon_GameObjectVarMi()
     {
         Assert.IsNotNull(joystickObject);
         Assert.AreEqual("JoystickButton", joystickObject.name);
     }
 
     [Test]
-    public void JoystickButton_AnimatorExists()
+    public void JoystickButon_AnimatorVarMi()
     {
         Assert.IsNotNull(animator);
     }
 
     [Test]
-    public void Animator_IsEnabled()
+    public void Animator_AktifMi()
     {
         Assert.IsTrue(animator.enabled);
     }
 
     [UnityTest]
-    public IEnumerator Animator_SetBoolParameters()
+    public IEnumerator Animator_BoolParametreleriAyarla()
     {
         animator.SetBool("down", true);
         animator.SetBool("idle", false);
@@ -53,7 +53,7 @@ public class JoystickButtonControlTest
     }
 
     [UnityTest]
-    public IEnumerator Animator_ParameterChanges()
+    public IEnumerator Animator_ParametreDegisiklikleri()
     {
         animator.SetBool("down", false);
         animator.SetBool("idle", true);
@@ -68,20 +68,20 @@ public class JoystickButtonControlTest
     }
 
     [Test]
-    public void GameObject_CanAddComponents()
+    public void GameObject_BilesenEklenebilirMi()
     {
         Assert.DoesNotThrow(() => joystickObject.GetComponent<Animator>());
     }
 
     [UnityTest]
-    public IEnumerator GameObject_ActiveInScene()
+    public IEnumerator GameObject_SahnedeAktifMi()
     {
         yield return null;
         Assert.IsTrue(joystickObject.activeInHierarchy);
     }
 
     [Test]
-    public void Animator_CanSetMultipleParameters()
+    public void Animator_BirdenFazlaParametreAyarla()
     {
         Assert.DoesNotThrow(() =>
         {

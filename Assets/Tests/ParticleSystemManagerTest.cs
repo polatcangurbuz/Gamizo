@@ -28,35 +28,35 @@ public class ParticleSystemManagerTest
     }
 
     [Test]
-    public void ParticleSystemManager_GameObjectExists()
+    public void ParticleSystemManager_GameObjectVarMi()
     {
         Assert.IsNotNull(particleManagerObject);
         Assert.AreEqual("ParticleSystemManager", particleManagerObject.name);
     }
 
     [Test]
-    public void ElectricityEffect_GameObjectExists()
+    public void ElektrikEfekti_GameObjectVarMi()
     {
         Assert.IsNotNull(electricityEffectObject);
         Assert.AreEqual("ElectricityEffect", electricityEffectObject.name);
     }
 
     [Test]
-    public void ParticleSystem_ComponentExists()
+    public void ParticleSystem_BilesenVarMi()
     {
         Assert.IsNotNull(particleSystem);
     }
 
 
     [UnityTest]
-    public IEnumerator ParticleSystem_CanPlay()
+    public IEnumerator ParticleSystem_CalistirilabilirMi()
     {
         Assert.DoesNotThrow(() => particleSystem.Play());
         yield return null;
     }
 
     [UnityTest]
-    public IEnumerator ParticleSystem_CanStop()
+    public IEnumerator ParticleSystem_DurdurulabilirMi()
     {
         particleSystem.Play();
         yield return null;
@@ -65,14 +65,14 @@ public class ParticleSystemManagerTest
     }
 
     [Test]
-    public void ParticleSystem_HasMainModule()
+    public void ParticleSystem_AnaModulVarMi()
     {
         var main = particleSystem.main;
         Assert.IsNotNull(main);
     }
 
     [UnityTest]
-    public IEnumerator ParticleSystem_PlayAndCheckIsPlaying()
+    public IEnumerator ParticleSystem_CalistirVeCalisiyorMu()
     {
         particleSystem.Play();
         yield return new WaitForSeconds(0.1f);
@@ -80,7 +80,7 @@ public class ParticleSystemManagerTest
     }
 
     [Test]
-    public void GameObject_CanGetParticleSystemComponent()
+    public void GameObject_ParticleSystemBileseniAlinabilirMi()
     {
         var ps = electricityEffectObject.GetComponent<ParticleSystem>();
         Assert.IsNotNull(ps);

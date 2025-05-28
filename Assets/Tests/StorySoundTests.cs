@@ -70,14 +70,14 @@ public class StorySoundTests : TestBase
     }
 
     [Test]
-    public void StorySound_InitialState_IsCorrect()
+    public void StorySound_BaslatildiMi()
     {
         // Başlangıç durumunun doğruluğunu kontrol et
         Assert.IsNotNull(storySound);
     }
 
     [Test]
-    public void StorySound_MusicPlayFunction_HandlesNegativeIndex()
+    public void StorySound_NegatifIndexOlursa()
     {
         int negativeIndex = -1;
 
@@ -86,7 +86,7 @@ public class StorySoundTests : TestBase
     }
 
     [Test]
-    public void StorySound_MusicPlayFunction_HandlesZeroIndex()
+    public void StorySound_SifirIndexOlursa()
     {
         int zeroIndex = 0;
 
@@ -95,7 +95,7 @@ public class StorySoundTests : TestBase
     }
 
     [Test]
-    public void StorySound_MusicPlayFunction_HandlesLargeIndex()
+    public void StorySound_YuksekIndexOlursa()
     {
         int largeIndex = 999;
 

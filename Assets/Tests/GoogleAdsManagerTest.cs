@@ -21,33 +21,33 @@ public class GoogleAdsManagerTest
     }
 
     [Test]
-    public void GameObject_CreatesSuccessfully()
+    public void GameObject_BasariliOlusturulduMu()
     {
         Assert.IsNotNull(adsManagerObject);
         Assert.AreEqual("GoogleAdsManager", adsManagerObject.name);
     }
 
     [Test]
-    public void GameObject_HasCorrectName()
+    public void GameObject_AdiDogruMu()
     {
         Assert.AreEqual("GoogleAdsManager", adsManagerObject.name);
     }
 
     [Test]
-    public void GameObject_IsActive()
+    public void GameObject_AktifMi()
     {
         Assert.IsTrue(adsManagerObject.activeInHierarchy);
     }
 
     [UnityTest]
-    public IEnumerator GameObject_ExistsInScene()
+    public IEnumerator GameObject_SahnedeVarMi()
     {
         yield return null;
         Assert.IsNotNull(GameObject.Find("GoogleAdsManager"));
     }
 
     [Test]
-    public void GameObject_CanBeDestroyed()
+    public void GameObject_YokEdilebilirMi()
     {
         Assert.DoesNotThrow(() => Object.DestroyImmediate(adsManagerObject));
     }

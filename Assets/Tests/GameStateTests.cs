@@ -62,7 +62,7 @@ public class GameStateTests
     }
 
     [Test]
-    public void Update_WhenHealthZero_ActivatesGameOver()
+    public void Update_CanSifir_GameOverAktifMi()
     {
         // Arrange
         characterHealth.Instance.Health = 0;
@@ -77,7 +77,7 @@ public class GameStateTests
     }
 
     [Test]
-    public void Update_WhenCountdownZero_ActivatesGameWin()
+    public void Update_SureSifir_GameWinAktifMi()
     {
         // Arrange
         SetPrivateField("countdown", 0f);
@@ -92,7 +92,7 @@ public class GameStateTests
     }
 
     [Test]
-    public void CountdownText_FormatsCorrectly_WhenAbove60Seconds()
+    public void CountdownText_FormatDogruMu_60SaniyeAltinda()
     {
         // Arrange
         SetPrivateField("countdown", 90f);
@@ -108,7 +108,7 @@ public class GameStateTests
     }
 
     [Test]
-    public void CountdownText_FormatsCorrectly_WhenBelow60Seconds()
+    public void CountdownText_FormatDogruMu_60SaniyeUstunde()
     {
         // Arrange
         SetPrivateField("countdown", 30f);
@@ -124,7 +124,7 @@ public class GameStateTests
     }
 
     [UnityTest]
-    public IEnumerator Update_CountdownDecreases_OverTime()
+    public IEnumerator Update_SureAzaliyorMu()
     {
         // Arrange
         SetPrivateField("countdown", 120f);

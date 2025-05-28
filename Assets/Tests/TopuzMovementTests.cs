@@ -20,7 +20,7 @@ public class TopuzMovementTests
     }
 
     [Test]
-    public void TopuzMovement_InitialValues_AreCorrect()
+    public void TopuzMovement_IlkDegerler_DogruMu()
     {
         Assert.AreEqual(0f, topuzMovement.currentX);
         Assert.AreEqual(0f, topuzMovement.currentZ);

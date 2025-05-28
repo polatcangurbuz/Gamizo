@@ -38,7 +38,7 @@ public class characterMovementTests
     }
 
     [UnityTest]
-    public IEnumerator FixedUpdate_ClampsPositionWithinBounds()
+    public IEnumerator FixedUpdate_KonumSinirlarIcerisindeMi()
     {
         // Arrange
         characterObject.transform.position = new Vector3(0, 3f, 1f); // Outside bounds
@@ -55,7 +55,7 @@ public class characterMovementTests
     }
 
     [UnityTest]
-    public IEnumerator Update_CalculatesMovementDirection()
+    public IEnumerator Update_HareketYonuHesaplanir()
     {
         mockTopuzMovement.currentX = 1f;
         mockTopuzMovement.currentZ = -1f;
@@ -66,18 +66,18 @@ public class characterMovementTests
     }
 
     [UnityTest]
-    public IEnumerator MovSpeed_AffectsMovementCalculation()
+    public IEnumerator HareketHizi_HareketHesabiniEtkiler()
     {
-        // X-Z yönünde hareket baþlat
+        // X-Z yÃ¶nÃ¼nde hareket baÅŸlat
         mockTopuzMovement.currentX = 1f;
         mockTopuzMovement.currentZ = 1f;
 
-        // Düþük hýzla baþla
+        // DÃ¼ÅŸÃ¼k hÄ±zla baÅŸla
         movementComponent.movSpeed = 0.08f;
         yield return WaitForPhysicsFrame();
         float velocityWithDefault = rigidBody.velocity.magnitude;
 
-        // Hýzý artýr
+        // HÄ±zÄ± artÄ±r
         movementComponent.movSpeed = 0.16f;
         yield return WaitForPhysicsFrame();
         float velocityWithIncreased = rigidBody.velocity.magnitude;
@@ -92,8 +92,8 @@ public class characterMovementTests
     private IEnumerator WaitForPhysicsFrame()
     {
         yield return new WaitForFixedUpdate();
-        yield return null; 
-    }
+        yield return null;
+    }
 
     [TearDown]
     public void TearDown()

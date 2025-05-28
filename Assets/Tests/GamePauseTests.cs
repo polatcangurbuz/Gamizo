@@ -17,7 +17,7 @@ public class GamePauseTests
     }
 
     [Test]
-    public void PauseGame_SetsTimeScaleToZero()
+    public void OyunuDurdur_TimeScaleSifirYapilir()
     {
         // Act
         gamePause.PauseGame();
@@ -27,7 +27,7 @@ public class GamePauseTests
     }
 
     [Test]
-    public void ContinueGame_SetsTimeScaleToOne()
+    public void OyunaDevamEt_TimeScaleBirYapilir()
     {
         // Arrange
         Time.timeScale = 0f;
@@ -40,7 +40,7 @@ public class GamePauseTests
     }
 
     [Test]
-    public void PauseAndContinue_RestoresTimeScale()
+    public void DurdurVeDevamEt_TimeScaleEskiDegerineDoner()
     {
         // Arrange
         float originalTimeScale = Time.timeScale;

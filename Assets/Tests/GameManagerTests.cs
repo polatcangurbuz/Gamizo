@@ -14,7 +14,7 @@ public class GameManagerTests
     }
 
     [Test]
-    public void Instance_IsSingleton()
+    public void TekilNesneMi()
     {
         // Assert
         Assert.IsNotNull(GameManager.Instance);
@@ -22,7 +22,7 @@ public class GameManagerTests
     }
 
     [Test]
-    public void Awake_SetsDontDestroyOnLoad()
+    public void Awake_DontDestroyOnLoadAyarlandiMi()
     {
         // Assert - Check that DontDestroyOnLoad was called
         // This is difficult to test directly, but we can verify the object exists
@@ -30,7 +30,7 @@ public class GameManagerTests
     }
 
     [Test]
-    public void MultipleCopies_DestroysDuplicates()
+    public void CokluKopyalar_KopyaYokEtme()
     {
         // Arrange & Act
         GameObject secondManager = new GameObject("GameManager2");
