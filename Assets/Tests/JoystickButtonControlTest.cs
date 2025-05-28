@@ -13,10 +13,6 @@ public class JoystickButtonControlTest
     {
         joystickObject = new GameObject("JoystickButton");
         animator = joystickObject.AddComponent<Animator>();
-
-        // For testing, we don't need an actual animator controller
-        // The tests are checking if we can set parameters without errors
-        // Unity will log warnings but the tests will still work
     }
 
     [TearDown]

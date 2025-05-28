@@ -15,15 +15,13 @@ public class StorySoundTests : TestBase
     [SetUp]
     public void Setup()
     {
-        // Call base setup to ensure AudioListener exists
         base.BaseSetUp();
 
-        // Test için gerekli GameObject ve component'leri oluştur
+
         storySoundObject = new GameObject();
         storySound = storySoundObject.AddComponent<StorySound>();
         audioSource = storySoundObject.AddComponent<AudioSource>();
         
-        // Test için örnek ses klipleri oluştur
         testClips = new List<AudioClip>();
         for (int i = 0; i < 3; i++)
         {
@@ -31,7 +29,6 @@ public class StorySoundTests : TestBase
             testClips.Add(clip);
         }
 
-        // StorySound bileşenine gerekli referansları ata
         var storyClipField = typeof(StorySound).GetField("storyClip", BindingFlags.NonPublic | BindingFlags.Instance);
         var audioSourceField = typeof(StorySound).GetField("audioSource", BindingFlags.NonPublic | BindingFlags.Instance);
 
@@ -82,7 +79,6 @@ public class StorySoundTests : TestBase
     [Test]
     public void StorySound_MusicPlayFunction_HandlesNegativeIndex()
     {
-        // Negatif index değeri
         int negativeIndex = -1;
 
         // Act & Assert
@@ -92,7 +88,6 @@ public class StorySoundTests : TestBase
     [Test]
     public void StorySound_MusicPlayFunction_HandlesZeroIndex()
     {
-        // Sıfır index değeri
         int zeroIndex = 0;
 
         // Act & Assert
@@ -102,27 +97,12 @@ public class StorySoundTests : TestBase
     [Test]
     public void StorySound_MusicPlayFunction_HandlesLargeIndex()
     {
-        // Büyük index değeri
         int largeIndex = 999;
 
         // Act & Assert
         Assert.DoesNotThrow(() => storySound.MusicPlayFunction(largeIndex));
     }
 
-    // A Test behaves as an ordinary method
-    [Test]
-    public void StorySoundTestsSimplePasses()
-    {
-        // Use the Assert class to test conditions
-    }
-
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator StorySoundTestsWithEnumeratorPasses()
-    {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
-    }
+ 
+   
 }
