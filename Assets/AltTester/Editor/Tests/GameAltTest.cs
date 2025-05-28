@@ -48,7 +48,21 @@ public class GameAltTest
         Assert.IsNotNull(GoogleAdsButton, "GoogleAdsButton bulunamadý!");
         System.Threading.Thread.Sleep(1000);
     }
+  
+    [Test]
+    public void InterAdsButtonTest()
+    {
+        var InterAds = altDriver.FindObject(By.NAME, "InterAds").Click();
+        Assert.IsNotNull(InterAds, "InterAds bulunamadý!");
+        System.Threading.Thread.Sleep(1000);
+    }
 
- 
+    [Test]
+    public void RewardedAdsButtonTest()
+    {
+        var RewardedAds = altDriver.FindObject(By.NAME, "RewardedAds").Click();
+        Assert.IsNotNull(RewardedAds, "RewardedAds bulunamadý!");
+        System.Threading.Thread.Sleep(1000);
+    }
 
 }

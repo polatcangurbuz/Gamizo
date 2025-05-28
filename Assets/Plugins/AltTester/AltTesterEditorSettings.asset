@@ -1298,13 +1298,13 @@ MonoBehaviour:
     _isSuite: 1
     _type: NUnit.Framework.Internal.TestAssembly
     _parentName: 
-    _testCaseCount: 4
+    _testCaseCount: 7
     _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
     _testDuration: 0
     path: 
-    _testSelectedCount: 4
+    _testSelectedCount: 7
   - _selected: 1
     _testName: GameAltTest
     _testAssembly: AltTester.AltTesterUnitySDK.Editor
@@ -1312,13 +1312,13 @@ MonoBehaviour:
     _isSuite: 1
     _type: NUnit.Framework.Internal.TestFixture
     _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/AltTester.AltTesterUnitySDK.Editor.dll
-    _testCaseCount: 2
+    _testCaseCount: 5
     _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
     _testDuration: 0
     path: 
-    _testSelectedCount: 2
+    _testSelectedCount: 5
   - _selected: 1
     _testName: GameAltTest.ChatButtonTest
     _testAssembly: AltTester.AltTesterUnitySDK.Editor
@@ -1330,7 +1330,35 @@ MonoBehaviour:
     _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
-    _testDuration: 1.0778944
+    _testDuration: 1.0654102
+    path: Assets/AltTester/Editor/Tests/GameAltTest.cs
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: GameAltTest.GoogleAdsButtonTest
+    _testAssembly: AltTester.AltTesterUnitySDK.Editor
+    _status: 1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GameAltTest
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 1.055952
+    path: Assets/AltTester/Editor/Tests/GameAltTest.cs
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: GameAltTest.InterAdsButtonTest
+    _testAssembly: AltTester.AltTesterUnitySDK.Editor
+    _status: 1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GameAltTest
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 1.0754012
     path: Assets/AltTester/Editor/Tests/GameAltTest.cs
     _testSelectedCount: 0
   - _selected: 1
@@ -1344,7 +1372,21 @@ MonoBehaviour:
     _foldOut: 1
     _testResultMessage: 
     _testStackTrace: 
-    _testDuration: 1.0534803
+    _testDuration: 1.0555408
+    path: Assets/AltTester/Editor/Tests/GameAltTest.cs
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: GameAltTest.RewardedAdsButtonTest
+    _testAssembly: AltTester.AltTesterUnitySDK.Editor
+    _status: 1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GameAltTest
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 1.0667433
     path: Assets/AltTester/Editor/Tests/GameAltTest.cs
     _testSelectedCount: 0
   - _selected: 1
@@ -1372,7 +1414,7 @@ MonoBehaviour:
     _foldOut: 0
     _testResultMessage: 
     _testStackTrace: 
-    _testDuration: 2.1337171
+    _testDuration: 2.1332569
     path: Assets/AltTester/Editor/Tests/MainAltTests.cs
     _testSelectedCount: 0
   - _selected: 1
@@ -1386,7 +1428,7 @@ MonoBehaviour:
     _foldOut: 0
     _testResultMessage: 
     _testStackTrace: 
-    _testDuration: 2.13965
+    _testDuration: 2.1256895
     path: Assets/AltTester/Editor/Tests/MainAltTests.cs
     _testSelectedCount: 0
   - _selected: 1
