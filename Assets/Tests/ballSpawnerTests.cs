@@ -39,7 +39,7 @@ public class ballSpawnerTests
     }
 
     [Test]
-    public void TekilNesneMi()
+    public void SingletonMi()
     {
         // Assert
         Assert.That(ballSpawner.Instance, Is.Not.Null, "Singleton instance should not be null");
@@ -115,6 +115,8 @@ public class ballSpawnerTests
         Object.DestroyImmediate(enemy);
         Object.DestroyImmediate(target);
     }
+
+ 
 
     [TearDown]
     public void TearDown()

@@ -1,0 +1,1437 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073b5878cbef2364cb928faafba64ca5, type: 3}
+  m_Name: AltTesterEditorSettings
+  m_EditorClassIdentifier: 
+  appendToName: 1
+  AdbPath: /usr/local/bin/adb
+  IProxyPath: /usr/local/bin/iproxy
+  XcrunPath: /usr/bin/xcrun
+  MyTests:
+  - _selected: 1
+    _testName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll
+    _testAssembly: Unity.VisualStudio.Editor
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 71
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ballCollisionTests
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 3
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 3
+  - _selected: 0
+    _testName: ballCollisionTests.Carpisma_HikayeBitmemisseSaglikAzalmaz
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ballCollisionTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ballCollisionTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ballCollisionTests.Carpisma_OyuncuEtiketiSaglikAzalir
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ballCollisionTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ballCollisionTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ballCollisionTests.Carpisma_OyuncuOlmayanEtiketSaglikAzalmaz
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ballCollisionTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ballCollisionTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ballSpawnerTests
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 5
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 5
+  - _selected: 0
+    _testName: ballSpawnerTests.HavuzdaGeriBirak_TopuDevreDisiBirakir
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ballSpawnerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ballSpawnerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ballSpawnerTests.SingletonMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ballSpawnerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ballSpawnerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ballSpawnerTests.TopuAl_HavuzBosIse_NullDondurur
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ballSpawnerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ballSpawnerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ballSpawnerTests.TopuAl_KullanilmayanToplariYenidenKullanir
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ballSpawnerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ballSpawnerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ballSpawnerTests.TopuFirlat_HedefeDogruHareketEder
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ballSpawnerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ballSpawnerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ButtonManagerTests
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 6
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 6
+  - _selected: 0
+    _testName: ButtonManagerTests.DusukButon_KalitesiniDusugeAyarlar
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ButtonManagerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ButtonManagerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ButtonManagerTests.MuzikSesiniAyarla_AudioSourceSesiniGunceller
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ButtonManagerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ButtonManagerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ButtonManagerTests.OrtaButon_KalitesiniOrtayaAyarlar
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ButtonManagerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ButtonManagerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ButtonManagerTests.SecenekleriAc_SeceneklerCanvasiniAktiflestirir
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ButtonManagerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ButtonManagerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ButtonManagerTests.SecenekleriKapat_SeceneklerCanvasiniDevreDisiBirakir
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ButtonManagerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ButtonManagerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ButtonManagerTests.YuksekButon_KalitesiniYuksegeAyarlar
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ButtonManagerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ButtonManagerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: characterHealthTests
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 5
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 5
+  - _selected: 0
+    _testName: characterHealthTests.Saglik_BaslangicDegeri_100_Olmali
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: characterHealthTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/characterHealthTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: characterHealthTests.Saglik_BirdenFazlaIse_TumOlayiAlir
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: characterHealthTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/characterHealthTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: characterHealthTests.Saglik_DegerAyarla_GecerliAraliktaKalir
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: characterHealthTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/characterHealthTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: characterHealthTests.Saglik_SaglikDegisti_EventTetiklenirMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: characterHealthTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/characterHealthTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: characterHealthTests.TekilNesneMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: characterHealthTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/characterHealthTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: characterMovementTests
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 3
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 3
+  - _selected: 0
+    _testName: characterMovementTests.FixedUpdate_KonumSinirlarIcerisindeMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: characterMovementTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/characterMovementTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: characterMovementTests.HareketHizi_HareketHesabiniEtkiler
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: characterMovementTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/characterMovementTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: characterMovementTests.Update_HareketYonuHesaplanir
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: characterMovementTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/characterMovementTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: enemySpawnerTests
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 3
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 3
+  - _selected: 0
+    _testName: enemySpawnerTests.DusmanHareketi_HedefeGidiyorMu
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: enemySpawnerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/enemySpawnerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: enemySpawnerTests.Instance_IsSingleton
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: enemySpawnerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/enemySpawnerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: enemySpawnerTests.Update_HerSureSonrasiSpawn
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: enemySpawnerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/enemySpawnerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GameManagerTests
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 3
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 3
+  - _selected: 0
+    _testName: GameManagerTests.Awake_DontDestroyOnLoadAyarlandiMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GameManagerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GameManagerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GameManagerTests.CokluKopyalar_KopyaYokEtme
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GameManagerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GameManagerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GameManagerTests.TekilNesneMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GameManagerTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GameManagerTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GamePauseTests
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 3
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 3
+  - _selected: 0
+    _testName: GamePauseTests.DurdurVeDevamEt_TimeScaleEskiDegerineDoner
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GamePauseTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GamePauseTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GamePauseTests.OyunaDevamEt_TimeScaleBirYapilir
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GamePauseTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GamePauseTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GamePauseTests.OyunuDurdur_TimeScaleSifirYapilir
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GamePauseTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GamePauseTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GameStateTests
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 5
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 5
+  - _selected: 0
+    _testName: GameStateTests.CountdownText_FormatDogruMu_60SaniyeAltinda
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GameStateTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GameStateTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GameStateTests.CountdownText_FormatDogruMu_60SaniyeUstunde
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GameStateTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GameStateTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GameStateTests.Update_CanSifir_GameOverAktifMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GameStateTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GameStateTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GameStateTests.Update_SureAzaliyorMu
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GameStateTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GameStateTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GameStateTests.Update_SureSifir_GameWinAktifMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GameStateTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GameStateTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GoogleAdsManagerTest
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 5
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 5
+  - _selected: 0
+    _testName: GoogleAdsManagerTest.GameObject_AdiDogruMu
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GoogleAdsManagerTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GoogleAdsManagerTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GoogleAdsManagerTest.GameObject_AktifMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GoogleAdsManagerTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GoogleAdsManagerTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GoogleAdsManagerTest.GameObject_BasariliOlusturulduMu
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GoogleAdsManagerTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GoogleAdsManagerTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GoogleAdsManagerTest.GameObject_SahnedeVarMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GoogleAdsManagerTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GoogleAdsManagerTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: GoogleAdsManagerTest.GameObject_YokEdilebilirMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GoogleAdsManagerTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/GoogleAdsManagerTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: HealthBarTest
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 6
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 6
+  - _selected: 0
+    _testName: HealthBarTest.HealthBar_BirdenFazlaCanDegisikligi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: HealthBarTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/HealthBarTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: HealthBarTest.HealthBar_CanFull_Update
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: HealthBarTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/HealthBarTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: HealthBarTest.HealthBar_CanGidinceUpdate
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: HealthBarTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/HealthBarTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: HealthBarTest.HealthBar_CanSifirken_Update
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: HealthBarTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/HealthBarTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: HealthBarTest.HealthBar_DestroySirasinda
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: HealthBarTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/HealthBarTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: HealthBarTest.HealthBar_DogruBaslat
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: HealthBarTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/HealthBarTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: JoystickButtonControlTest
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 8
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 8
+  - _selected: 0
+    _testName: JoystickButtonControlTest.Animator_AktifMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: JoystickButtonControlTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/JoystickButtonControlTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: JoystickButtonControlTest.Animator_BirdenFazlaParametreAyarla
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: JoystickButtonControlTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/JoystickButtonControlTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: JoystickButtonControlTest.Animator_BoolParametreleriAyarla
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: JoystickButtonControlTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/JoystickButtonControlTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: JoystickButtonControlTest.Animator_ParametreDegisiklikleri
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: JoystickButtonControlTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/JoystickButtonControlTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: JoystickButtonControlTest.GameObject_BilesenEklenebilirMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: JoystickButtonControlTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/JoystickButtonControlTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: JoystickButtonControlTest.GameObject_SahnedeAktifMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: JoystickButtonControlTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/JoystickButtonControlTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: JoystickButtonControlTest.JoystickButon_AnimatorVarMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: JoystickButtonControlTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/JoystickButtonControlTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: JoystickButtonControlTest.JoystickButon_GameObjectVarMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: JoystickButtonControlTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/JoystickButtonControlTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ParticleSystemManagerTest
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 8
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 8
+  - _selected: 0
+    _testName: ParticleSystemManagerTest.ElektrikEfekti_GameObjectVarMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ParticleSystemManagerTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ParticleSystemManagerTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ParticleSystemManagerTest.GameObject_ParticleSystemBileseniAlinabilirMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ParticleSystemManagerTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ParticleSystemManagerTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ParticleSystemManagerTest.ParticleSystem_AnaModulVarMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ParticleSystemManagerTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ParticleSystemManagerTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ParticleSystemManagerTest.ParticleSystem_BilesenVarMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ParticleSystemManagerTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ParticleSystemManagerTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ParticleSystemManagerTest.ParticleSystem_CalistirilabilirMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ParticleSystemManagerTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ParticleSystemManagerTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ParticleSystemManagerTest.ParticleSystem_CalistirVeCalisiyorMu
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ParticleSystemManagerTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ParticleSystemManagerTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ParticleSystemManagerTest.ParticleSystem_DurdurulabilirMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ParticleSystemManagerTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ParticleSystemManagerTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: ParticleSystemManagerTest.ParticleSystemManager_GameObjectVarMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: ParticleSystemManagerTest
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/ParticleSystemManagerTest.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: StorySoundTests
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 4
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 4
+  - _selected: 0
+    _testName: StorySoundTests.StorySound_BaslatildiMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: StorySoundTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/StorySoundTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: StorySoundTests.StorySound_NegatifIndexOlursa
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: StorySoundTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/StorySoundTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: StorySoundTests.StorySound_SifirIndexOlursa
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: StorySoundTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/StorySoundTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: StorySoundTests.StorySound_YuksekIndexOlursa
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: StorySoundTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/StorySoundTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: TopuzMovementTests
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 1
+  - _selected: 0
+    _testName: TopuzMovementTests.TopuzMovement_IlkDegerler_DogruMu
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: TopuzMovementTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/TopuzMovementTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: TypeWriteTests
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/PlayModeTests.dll
+    _testCaseCount: 3
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 3
+  - _selected: 0
+    _testName: TypeWriteTests.TypeWrite_HikayeListesi_BaslatildiMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: TypeWriteTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/TypeWriteTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: TypeWriteTests.TypeWrite_IlkDurum_DogruMu
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: TypeWriteTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/TypeWriteTests.cs
+    _testSelectedCount: 0
+  - _selected: 0
+    _testName: TypeWriteTests.TypeWrite_TekilNesne_AyarlandiMi
+    _testAssembly: PlayModeTests
+    _status: 0
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: TypeWriteTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: Assets/Tests/TypeWriteTests.cs
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/Unity.Rider.Editor.dll
+    _testAssembly: Unity.Rider.Editor
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/UnityEditor.TestRunner.dll
+    _testAssembly: UnityEditor.TestRunner
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/AltTester.AltTesterUnitySDK.Editor.dll
+    _testAssembly: AltTester.AltTesterUnitySDK.Editor
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 4
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 4
+  - _selected: 1
+    _testName: GameAltTest
+    _testAssembly: AltTester.AltTesterUnitySDK.Editor
+    _status: 1
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/AltTester.AltTesterUnitySDK.Editor.dll
+    _testCaseCount: 2
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 2
+  - _selected: 1
+    _testName: GameAltTest.ChatButtonTest
+    _testAssembly: AltTester.AltTesterUnitySDK.Editor
+    _status: 1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GameAltTest
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 1.0778944
+    path: Assets/AltTester/Editor/Tests/GameAltTest.cs
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: GameAltTest.OptionsButtonTest
+    _testAssembly: AltTester.AltTesterUnitySDK.Editor
+    _status: 1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: GameAltTest
+    _testCaseCount: 1
+    _foldOut: 1
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 1.0534803
+    path: Assets/AltTester/Editor/Tests/GameAltTest.cs
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: MainAltTests
+    _testAssembly: AltTester.AltTesterUnitySDK.Editor
+    _status: 1
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestFixture
+    _parentName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/AltTester.AltTesterUnitySDK.Editor.dll
+    _testCaseCount: 2
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 2
+  - _selected: 1
+    _testName: MainAltTests.MainSettingsButtonTest
+    _testAssembly: AltTester.AltTesterUnitySDK.Editor
+    _status: 1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: MainAltTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 2.1337171
+    path: Assets/AltTester/Editor/Tests/MainAltTests.cs
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: MainAltTests.MainStartButtonTest
+    _testAssembly: AltTester.AltTesterUnitySDK.Editor
+    _status: 1
+    _isSuite: 0
+    _type: NUnit.Framework.Internal.TestMethod
+    _parentName: MainAltTests
+    _testCaseCount: 1
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 2.13965
+    path: Assets/AltTester/Editor/Tests/MainAltTests.cs
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll
+    _testAssembly: Unity.TestTools.CodeCoverage.Editor
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  - _selected: 1
+    _testName: C:/Users/OMERFARUKCEYLAN/Desktop/GithubRepos/Gamizo/Library/ScriptAssemblies/UnityEngine.TestRunner.dll
+    _testAssembly: UnityEngine.TestRunner
+    _status: 0
+    _isSuite: 1
+    _type: NUnit.Framework.Internal.TestAssembly
+    _parentName: 
+    _testCaseCount: 0
+    _foldOut: 0
+    _testResultMessage: 
+    _testStackTrace: 
+    _testDuration: 0
+    path: 
+    _testSelectedCount: 0
+  Scenes:
+  - _toBeBuilt: 1
+    _path: Assets/Scenes/GameScene.unity
+    _buildIndex: 0
+  platform: 2
+  StandaloneTarget: 5
+  RanInEditor: 1
+  ScenePathDisplayed: 1
+  BuildLocationPath: 
+  createXMLReport: 0
+  xMLFilePath: 
+  AltServerPort: 13000
+  AltServerHost: localhost
+  AppName: __default__
+  assemblyTestDisplayedIndex: 0
+  ResetConnectionData: 1
+  UID: 
+  KeepAUTSymbolDefined: 1
