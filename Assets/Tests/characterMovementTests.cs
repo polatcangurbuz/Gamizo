@@ -68,16 +68,32 @@ public class characterMovementTests
     [UnityTest]
     public IEnumerator MovSpeed_AffectsMovementCalculation()
     {
+        // X-Z yönünde hareket baþlat
         mockTopuzMovement.currentX = 1f;
         mockTopuzMovement.currentZ = 1f;
+
+        // Düþük hýzla baþla
         movementComponent.movSpeed = 0.08f;
-        yield return null;
-        float velocityWithDefault = rigidBody.velocity.y;
+        yield return WaitForPhysicsFrame();
+        float velocityWithDefault = rigidBody.velocity.magnitude;
+
+        // Hýzý artýr
         movementComponent.movSpeed = 0.16f;
-        yield return null;
-        float velocityWithIncreased = rigidBody.velocity.y;
-        Assert.That(Mathf.Abs(velocityWithIncreased), Is.GreaterThan(Mathf.Abs(velocityWithDefault)), "Increasing movSpeed should increase velocity");
+        yield return WaitForPhysicsFrame();
+        float velocityWithIncreased = rigidBody.velocity.magnitude;
+
+        Assert.That(
+            velocityWithIncreased,
+            Is.GreaterThan(velocityWithDefault),
+            "Increasing movSpeed should increase velocity"
+        );
     }
+
+    private IEnumerator WaitForPhysicsFrame()
+    {
+        yield return new WaitForFixedUpdate();
+        yield return null; 
+    }
 
     [TearDown]
     public void TearDown()
