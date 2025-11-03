@@ -1,90 +1,81 @@
-# GAMİZO
+# 🎮 GAMİZO
 
-GAMİZO is a retro-style arcade game developed using the Unity game engine. Players control the on-screen character through a joystick and interactive mechanics, avoiding enemies and completing various in-game tasks. This project serves as an experimental example of game development, showcasing different gameplay mechanics and modern development techniques.
+**GAMİZO** is a retro-style arcade game built with **Unity**. Players control the on-screen character using a joystick and interactive mechanics, avoiding enemies and completing in-game tasks. This project demonstrates experimental gameplay mechanics and modern game development techniques.
 
-Features
+---
 
-Retro TV Screen Mechanic: Players observe the game world through a TV screen and control the character using a joystick.
+## ✨ Features
 
-Diverse Gameplay Mechanics: Enemy avoidance, ball and obstacle interactions, and a health system.
+- **Retro TV Screen Mechanic** – Observe the game world through a TV screen and control the character with a joystick.  
+- **Diverse Gameplay Mechanics** – Enemy avoidance, ball and obstacle interactions, and a health system.  
+- **Post-Processing Effects** – Bloom, Color Grading, Vignette, and other visual effects using Unity Post Processing Stack.  
+- **Ads and Reward System** – Integrated with Google Mobile Ads; players can earn rewards after watching ads.  
+- **Alttester Package** – Edit and Play Mode testing for reliable functionality.  
+- **Dynamic Chat System** – Integrated with Gemini LLM for in-game AI-driven conversation.  
+- **Modular Structure** – Easily add or modify gameplay mechanics and UI elements.
 
-Post-Processing Effects: Visual effects implemented using Unity’s Post Processing Stack.
+---
 
-Ads and Reward System: Integrated with Google Mobile Ads; players can earn rewards after watching ads.
+## 🛠 Packages and Tools
 
-Alttester Package: Edit and Play Mode tests have been conducted to ensure proper functionality.
+| Tool/Package | Purpose |
+|--------------|---------|
+| Unity 2021+ | Game engine & scene management |
+| Post Processing Stack v2 | Visual effects & color grading |
+| Google Mobile Ads SDK | Ads & rewards |
+| Alttester | Edit & Play Mode testing |
+| Gemini LLM | AI-driven in-game chat |
+| Cinemachine & DOTween | Camera controls & animations |
 
-Chat System: Integrated with Gemini LLM to provide dynamic in-game conversation experiences.
+---
 
-Modular Structure: Various gameplay mechanics and UI elements can be added or modified modularly.
+## 🚀 Installation
 
-Packages and Tools Used
+1. **Clone the repository** (latest developments are in the `Test` branch):
 
-Unity 2021+ – Game engine and scene management.
-
-Post Processing Stack v2 – Visual effects and color grading.
-
-Google Mobile Ads SDK – Ads and reward system.
-
-Alttester – Edit and Play Mode testing.
-
-Gemini LLM – AI-driven in-game chat system.
-
-Cinemachine & DOTween – Camera controls and animation effects.
-
-Installation
-
-Clone the repository (the latest developments are on the Test branch):
-
+```bash
 git clone -b Test https://github.com/polatcangurbuz/Gamizo.git
 cd Gamizo
+```
 
+2. Open the project in **Unity Hub**.  
+3. Install the required packages via **Unity Package Manager**:  
+   - Post Processing  
+   - Google Mobile Ads  
+   - DOTween  
+   - Alttester  
+4. Open the main scene:  
+   ```
+   Assets/Scenes/GameScene.unity
+   ```  
+5. Test the game in **Play Mode** or build and run it.
 
-Open the project in Unity Hub.
+---
 
-Install the required packages via the Unity Package Manager:
+## 🎮 Gameplay Instructions
 
-Post Processing
+- **Joystick Controls:** Move your character using the joystick.  
+- **On-Screen Objects:** Avoid enemies and obstacles.  
+- **Ad Viewing:** Watch a limited number of ads per day to earn rewards.  
+- **Health System:** Each hit reduces health; the game ends when health reaches zero.
 
-Google Mobile Ads
+---
 
-DOTween
+## 🧪 Development & Testing
 
-Alttester
+- **Edit Mode Tests:** Validated with Alttester for scene and script functionality.  
+- **Play Mode Tests:** Real-time gameplay behaviors tested.  
+- **Post-Processing Effects:** Bloom, Color Grading, Vignette applied.  
+- **Chat System:** AI-driven chat powered by Gemini LLM.
 
-Open the scene: Assets/Scenes/GameScene.unity.
+---
 
-Test the game in Play Mode or create a build to run it.
+## 🤝 Contributing
 
-Gameplay Instructions
+To contribute:  
 
-Joystick Controls: Move the character using the joystick.
+1. Fork the repository and create your own branch.  
+2. Add new features or fix bugs.  
+3. Submit a pull request; changes will be reviewed and merged into the main project.
 
-On-Screen Objects: Avoid enemies and obstacles.
-
-Ad Viewing: Watch a limited number of ads per day to earn rewards.
-
-Health System: Each hit reduces health; the game ends when health reaches zero.
-
-
-Development and Testing
-
-Edit Mode Tests: Conducted with Alttester for scene and script validation.
-
-Play Mode Tests: Real-time gameplay behaviors have been tested.
-
-Post-Processing Effects: Bloom, Color Grading, Vignette, and other effects applied.
-
-Chat System: AI-driven chat experience powered by Gemini LLM.
-
-Contributing
-
-To contribute to the project:
-
-Fork the repository and work on your own branch.
-
-Add new features or fix bugs.
-
-Submit a pull request; changes will be reviewed and merged into the main project.
-
-Note: The latest developments are available on the Test branch.
+> **Note:** Latest developments are on the **Test** branch.
